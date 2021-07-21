@@ -1,0 +1,4 @@
+<apex:page controller="SimpleVFController">
+  This is our new Visualforce page
+  <br/><br/> Welcome {!name}
+</apex:page>
