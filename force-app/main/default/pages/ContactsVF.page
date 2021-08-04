@@ -1,0 +1,7 @@
+<apex:page controller="ContactsVFContoller">
+  <h1>Contacts List</h1>
+  <br/>Number of Contacts: {!contactsCount}<br/><br/>
+  <apex:repeat value="{!contacts}" var="con">
+    <li>{!con.Name}, {!con.Email}</li>
+  </apex:repeat>
+</apex:page>
