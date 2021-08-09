@@ -1,0 +1,4 @@
+<aura:component>
+    Hello world from Aura Component!!
+    <br/><br/><c:simpleLWC />
+</aura:component>	
