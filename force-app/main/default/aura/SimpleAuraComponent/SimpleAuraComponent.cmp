@@ -1,4 +1,9 @@
 <aura:component>
-    Hello world from Aura Component!!
-    <br/><br/><c:simpleLWC />
+    <aura:attribute name="person" type="String" default="World" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    Hello {!v.person} from Aura Component!!
+    <br/><lightning:input name="nameInput" aura:id="nameInputId" 
+            label="What's your name?" value="initial value"/>
+    <br/><lightning:button variant="brand" label="Say Hello" 
+            title="Say Hello Title" onclick="{! c.sayHello }" />
 </aura:component>	
