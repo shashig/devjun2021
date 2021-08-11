@@ -1,0 +1,28 @@
+<template>
+    <div class="slds-text-heading_medium">Child LWC</div>
+    <div>stringProperty: {stringProperty}</div>
+    <div>
+        <ul class="slds-m-around_medium">
+            <template for:each={arrayProperty} for:item="item">
+                <li key={item}>
+                    {item}
+                </li>
+            </template>
+        </ul>
+    </div>
+    <div>
+        objectProperty.Name: <span class="slds-text-color_success">{objectProperty.Name}</span>, 
+        objectProperty.City: <span class="slds-text-color_success">{objectProperty.City}</span>
+    </div>
+    <lightning-button label="Change String Value" onclick={handleClick}>
+    </lightning-button>
+    <lightning-button label="Change Array Value" onclick={handleClick}>
+    </lightning-button>
+    <lightning-button label="Change Object Value" onclick={handleClick}>
+    </lightning-button>
+    <br/>
+    <lightning-button label="Add New Item to Array" onclick={handleClick}>
+    </lightning-button>
+    <lightning-button label="Change Object City" onclick={handleClick}>
+    </lightning-button>
+</template>
