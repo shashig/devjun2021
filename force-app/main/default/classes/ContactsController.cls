@@ -1,7 +1,10 @@
 public with sharing class ContactsController {
-    @AuraEnabled
-    public static List<Contact> getContacts(){
-        return ([select id, name, email, CreatedDate from Contact order by CreatedDate desc]);
+    public class CustomException extends Exception {}
+    @AuraEnabled(Cacheable=true)
+    public static List<Contact> getContacts() {
+        List<Contact> contacts = [select id, name, email, CreatedDate from Contact order by CreatedDate desc];
+        
+        return (contacts);
     }
 
     @AuraEnabled
