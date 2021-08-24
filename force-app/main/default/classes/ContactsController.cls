@@ -7,6 +7,15 @@ public with sharing class ContactsController {
         return (contacts);
     }
 
+    @AuraEnabled(Cacheable=true)
+    public static Contact getContact(String contactId) {
+        Contact cont = [select id, name, email, CreatedDate 
+                          from Contact 
+                         where Id = : contactId];
+        
+        return (cont);
+    }
+
     @AuraEnabled
     public static Contact saveContact(Contact cont){
         insert (cont);

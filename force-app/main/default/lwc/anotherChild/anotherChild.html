@@ -1,0 +1,27 @@
+<template>
+    Child LWC
+
+    <br/>Record ID: {recordId}
+
+    <br/><br/> <strong>Array Data</strong>
+    <ul class="slds-m-around_medium">
+        <template for:each={myArray} for:item="item">
+            <li key={item}>
+                {item}
+            </li>
+        </template>
+    </ul>
+    <strong>Object Data</strong>
+    <br/>Company Name: {myObject.name}
+    <br/>Location: {myObject.location}
+    <br/>Number: {myNumber}
+    <br/><br/>
+    <lightning-button label='Change Object' onclick={clickHandler}>
+    </lightning-button>
+    <lightning-button label='Change Array' onclick={clickHandler}>
+    </lightning-button>
+    <lightning-button label='Change Object Field Value' onclick={clickHandler}>
+    </lightning-button>
+    <lightning-button label='Add Item to Array' onclick={clickHandler}>
+    </lightning-button>
+</template>
