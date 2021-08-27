@@ -22,4 +22,12 @@ public with sharing class ContactsController {
 
         return (cont);
     }
+
+    @AuraEnabled(Cacheable=true)
+    public static List<Contact> searchContacts(String namePattern) {
+        String searchString = '%' + namePattern + '%';
+        return( [select id, name, email, CreatedDate 
+                   from Contact 
+                  where Name like :searchString]);
+    }
 }
