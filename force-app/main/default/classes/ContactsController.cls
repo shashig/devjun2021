@@ -23,6 +23,8 @@ public with sharing class ContactsController {
         return (cont);
     }
 
+    //A simple change to show how we can get other's changes into our VS Code
+    
     @AuraEnabled(Cacheable=true)
     public static List<Contact> searchContacts(String namePattern) {
         String searchString = '%' + namePattern + '%';
