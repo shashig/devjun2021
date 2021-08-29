@@ -32,6 +32,8 @@ public with sharing class ContactsController {
                    from Contact 
                   where Name like :searchString]);
 
-        //Doing some conflicting change to this code
+        //Changed by another user also.
+
+        //Some more change done
     }
 }
