@@ -31,5 +31,7 @@ public with sharing class ContactsController {
         return( [select id, name, email, CreatedDate 
                    from Contact 
                   where Name like :searchString]);
+
+        //Doing some conflicting change to this code
     }
 }
