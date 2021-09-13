@@ -1,8 +1,9 @@
 <template>
+    Employee Count: {empCount}
     <template if:false={employees}>
-        <lightning-card>
+        <lightning-card >
             <template for:each={guides} for:item="guide">
-                <a href="#" key={guide.name} onclick={showEmployees}>
+                <a href="#" onclick={showEmployees} key={guide.name}>
                     <lightning-layout-item padding="around-small" alignment-bump="center">
                         <p>{guide.name}</p>
                     </lightning-layout-item>
@@ -13,7 +14,7 @@
     <template if:true={employees}>
         <lightning-card>
             <template for:each={employees} for:item="emp">
-                <a href="#" key={emp.name} data-guidename={emp.name}>
+                <a href="#" key={emp.name}>
                     <lightning-layout-item padding="around-small" alignment-bump="center">
                         <p>{emp.name}</p>
                     </lightning-layout-item>
