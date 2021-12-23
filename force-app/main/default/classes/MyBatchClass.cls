@@ -13,7 +13,7 @@ public with sharing class MyBatchClass implements Database.Batchable<sObject>, D
         executeCount++;
         recordCount += scope.size();
         Account acct = (Account)scope[0];
-        System.debug('Account Name; ' + acct.Name);
+        System.debug('Account Nam: ' + acct.Name);
     }
 
     public void finish(Database.BatchableContext BC) {

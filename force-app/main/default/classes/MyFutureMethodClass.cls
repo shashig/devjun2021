@@ -4,8 +4,7 @@ public class MyFutureMethodClass {
         System.debug('MyFutureMethodClass.futureCall() ran at: ' + System.now());
     }
 
-    @future
-    public static void anotherFutureCall() {
-        System.debug('MyFutureMethodClass.anotherFutureCall() ran at: ' + System.now());
+    public static void nonFutureCall() {
+        System.debug('MyFutureMethodClass.nonFutureCall() ran at: ' + System.now());
     }
 }
