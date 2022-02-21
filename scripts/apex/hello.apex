@@ -12,7 +12,7 @@ System.debug('Finished Calling futureCall()');
 //Batch class test
 System.debug('Starting a batch job');
 MyBatchClass mbc = new MyBatchClass();
-Database.executeBatch(mbc, 20);
+Database.executeBatch(mbc, 30);
 System.debug('Started a batch job');
 */
 
@@ -32,5 +32,15 @@ System.debug(UserInfo.getSessionId().substring(0, 10) + ' ' + UserInfo.getSessio
 */
 
 //SOAP Service Callout
+/*
 CalculatorServices.CalculatorImplPort calc = new CalculatorServices.CalculatorImplPort();
 System.debug('>>>>> ' + calc.doDivide(10, 3));
+*/
+
+//Access Custom Metadata
+/*
+Credit_Decision_Parameter__mdt lowCreditScoreLimit = [select Credit_Score__c 
+                                 from Credit_Decision_Parameter__mdt 
+                                where DeveloperName = 'Low_Score' limit 1];
+System.debug('>>>> Low Score Limit: ' + lowCreditScoreLimit.Credit_Score__c);
+*/
