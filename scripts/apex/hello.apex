@@ -26,16 +26,18 @@ System.enqueueJob(mqc);
 //Apex REST Callout
 //SimpleRESTCallout.getAccounts();
 
-/*
+
 //Hack to get session id
+//System.debug(UserInfo.getSessionId());
 System.debug(UserInfo.getSessionId().substring(0, 10) + ' ' + UserInfo.getSessionId().substring(10));
-*/
+
 
 //SOAP Service Callout
-/*
+
 CalculatorServices.CalculatorImplPort calc = new CalculatorServices.CalculatorImplPort();
-System.debug('>>>>> ' + calc.doDivide(10, 3));
-*/
+System.debug('>>>>> 10 / 3: ' + calc.doDivide(10, 3));
+System.debug('>>>>> 10 * 3: ' + calc.doMultiply(10, 3));
+System.debug('>>>>> 10 + 3: ' + calc.doAdd(10, 3));
 
 //Access Custom Metadata
 /*

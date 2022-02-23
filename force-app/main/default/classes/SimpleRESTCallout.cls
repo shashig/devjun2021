@@ -1,5 +1,5 @@
 public with sharing class SimpleRESTCallout {
-    private static final String HFS_ACCOUNTS = 'http://getaccounts-jzgj.us-e2.cloudhub.io/accounts';
+    private static final String HFS_ACCOUNTS = 'https://testappshashi.appspot.com/accounts';
     private static final String HTTP_METHOD_GET = 'GET';
     public static void getAccounts() {
         Http httpInstance = new Http();

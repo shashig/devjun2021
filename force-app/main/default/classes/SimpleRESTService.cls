@@ -2,6 +2,6 @@
 global with sharing class SimpleRESTService {
    @HttpGet
    global static String getHello() {
-       return 'Hello World';
+       return 'Hello Stratos Team';
    }
 }
