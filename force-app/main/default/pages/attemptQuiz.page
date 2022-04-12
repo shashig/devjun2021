@@ -1,0 +1,18 @@
+<apex:page controller="AttemptQuizController" showHeader="false">
+    <!-- TODO #1: load the Lightning Components for Visualforce JavaScript library. -->
+    <apex:includeLightning/>
+    <div id="quizDiv" />
+    <script>
+        var recordId = '{!recordId}';
+        // Use JavaScript to invoke Lightning Web Components
+        $Lightning.use("c:vfDependency", function () {
+            $Lightning.createComponent(
+                "c:quiz",
+                {
+                    recordId: recordId
+                },
+                "quizDiv"
+            );
+	    });
+    </script>
+</apex:page>

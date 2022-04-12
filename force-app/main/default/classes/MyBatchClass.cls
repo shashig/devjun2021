@@ -9,8 +9,8 @@ public with sharing class MyBatchClass implements Database.Batchable<sObject>, D
     }
 
     public void execute(Database.BatchableContext BC, List<sObject> scope) {
-        System.debug('Came to execute method @ ' + System.now() + '. Number of records: ' + scope.size());
         executeCount++;
+        System.debug('Came to execute method @ ' + System.now() + '. Number of records: ' + scope.size() + '. Execution count: ' + executeCount);
         recordCount += scope.size();
         Account acct = (Account)scope[0];
         System.debug('Account Name: ' + acct.Name);
