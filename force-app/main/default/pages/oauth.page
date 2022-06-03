@@ -1,0 +1,10 @@
+<apex:page controller="OauthController">
+  <h1>OAuth Demo</h1>
+  <a href="https://adssotest-dev-ed.my.salesforce.com/services/oauth2/authorize?client_id=3MVG9QDx8IX8nP5Qv7CRDuv.AB.tYlhtmfdfNh6Y.oV8ahe6WO6nyE1odYu7fU6CVOzVIgP51IAovgXCn_mZ0&redirect_uri=https://hfs-jun21-dev-ed--c.visualforce.com/apex/oauth&response_type=code">Initiate OAuth Flow</a>
+  <br/>Code: {!code}
+  <br/>Token Response: {!tokenResponse}
+  <br/>Query Response: {!queryResponse}
+  <apex:form>
+    <apex:commandButton action="{!getAccounts}" value="Get Accounts" id="getAccountBtn"/>
+  </apex:form>
+</apex:page>
