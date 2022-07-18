@@ -12,8 +12,14 @@ public with sharing class MyBatchClass implements Database.Batchable<sObject>, D
         executeCount++;
         System.debug('Came to execute method @ ' + System.now() + '. Number of records: ' + scope.size() + '. Execution count: ' + executeCount);
         recordCount += scope.size();
-        Account acct = (Account)scope[0];
-        System.debug('Account Name: ' + acct.Name);
+        //Account acct = (Account)scope[0];
+        List<Account> accounts = (List<Account>)scope;
+        Integer index = 1;
+        for (Account a : accounts) {
+            a.Description = '' + ((executeCount - 1) * 30 + index++);
+        }
+        Database.update(accounts, false);
+        //System.debug('Account Name: ' + acct.Name);
     }
 
     public void finish(Database.BatchableContext BC) {
