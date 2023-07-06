@@ -1,0 +1,15 @@
+<template>
+  <lightning-card title="Multiple Inputs">
+  <template for:each={inputCounts} for:item="input">
+    <li key={input.key}>
+      <lightning-input  type="number" name="concessionInput" label="Concession" value={concession} 
+        formatter="currency" step="1" data-input-id={input.id}
+        onchange={inputChange}
+      ></lightning-input>
+    </li>
+    
+  </template>
+  <lightning-button label="Add Item" onclick={addCount}></lightning-button>
+  <lightning-button label="Get Input Values" onclick={getAllValues}></lightning-button>
+</lightning-card>
+</template>
