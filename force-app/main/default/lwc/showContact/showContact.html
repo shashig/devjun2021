@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Contact Information" icon-name="standard:contact">
+      <div class="slds-var-m-left_medium">
+        {name} - {email}
+      </div>
+      <lightning-button label="Get Contact Info" slot="actions" 
+        onclick={handleClick} class="slds-var-m-left_x-small">
+      </lightning-button>
+      <lightning-button label="Reset" slot="actions" 
+        onclick={reset} class="slds-var-m-left_x-small">
+      </lightning-button>
+    </lightning-card>
+</template>
