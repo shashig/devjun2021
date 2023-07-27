@@ -1,0 +1,7 @@
+<template>
+    <lightning-card title={accountName}>
+      <lightning-button onclick={getAccountJS} label="Get Account" slot="actions" variant="brand">
+      </lightning-button>
+      <c-show-account-contacts account-contacts={contacts}></c-show-account-contacts>
+    </lightning-card>
+</template>
