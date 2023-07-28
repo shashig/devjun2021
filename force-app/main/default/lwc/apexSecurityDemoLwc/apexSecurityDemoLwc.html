@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Apex Security Demo">
+      <lightning-button label="Refresh" onclick={refresh} slot="actions"></lightning-button>
+      <template for:each={apexSecurityDemoRecords} for:item="apexSecurityDemoRec">
+        <li key={apexSecurityDemoRec.Id}>
+            {apexSecurityDemoRec.Name}, {apexSecurityDemoRec.Description__c}, {apexSecurityDemoRec.Your_Mood__c}
+        </li>
+      </template>
+      <!-- for (Contact c : contacts) -->
+    </lightning-card>
+</template>
